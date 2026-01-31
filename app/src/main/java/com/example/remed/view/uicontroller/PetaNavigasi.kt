@@ -19,20 +19,15 @@ fun PetaNavigasi(
         startDestination = DestinasiHome.route,
         modifier = modifier
     ) {
-        // --- RUTE HALAMAN HOME ---
         composable(route = DestinasiHome.route) {
             HalamanHome(
                 navigateToItemEntry = {
-                    // Perintah untuk pindah ke halaman Entry
                     navController.navigate(DestinasiEntry.route)
                 }
             )
         }
 
-        // --- RUTE HALAMAN ENTRY (TAMBAH DATA) ---
         composable(route = DestinasiEntry.route) {
-            // Nanti kita isi ini dengan HalamanEntry() saat sudah dibuat.
-            // Untuk sementara biarkan kosong atau Text("Halaman Entry") agar tidak error
         }
     }
 }
