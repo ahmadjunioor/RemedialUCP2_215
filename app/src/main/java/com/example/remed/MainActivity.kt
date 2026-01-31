@@ -19,7 +19,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // 1. Inisialisasi Database (Wajib!)
         Container = DefaultAppContainer(context = applicationContext)
 
         setContent {
@@ -28,7 +27,6 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    // 2. Panggil PetaNavigasi
                     PetaNavigasi()
                 }
             }
