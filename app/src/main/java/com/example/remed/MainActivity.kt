@@ -13,12 +13,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.remed.repositori.Container
 import com.example.remed.repositori.DefaultAppContainer
 import com.example.remed.ui.theme.RemedTheme
+import com.example.remed.view.uicontroller.PetaNavigasi
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // 1. Inisialisasi Database (Wajib!)
         Container = DefaultAppContainer(context = applicationContext)
-        // -------------------------------------
 
         setContent {
             RemedTheme {
@@ -26,6 +28,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    // 2. Panggil PetaNavigasi
+                    PetaNavigasi()
                 }
             }
         }
